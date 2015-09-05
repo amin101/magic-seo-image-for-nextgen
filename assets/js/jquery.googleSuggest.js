@@ -8,18 +8,7 @@ jq.fn.googleSuggest = function(opts){
   extra_opts = {
     minLength: 2,
   }
-  opts = jq.extend({service: 'web', secure: false}, opts,extra_opts);
-
-
-  var services = {
-    youtube: { client: 'youtube', ds: 'yt' },
-    books: { client: 'books', ds: 'bo' },
-    products: { client: 'products-cc', ds: 'sh' },
-    news: { client: 'news-cc', ds: 'n' },
-    images: { client: 'img', ds: 'i' },
-    web: { client: 'psy', ds: '' },
-    recipes: { client: 'psy', ds: 'r' }
-  }, service = services[opts.service];
+  opts = jq.extend({service: 'web', secure: false, client: 'psy', ds: '' }, opts,extra_opts);
 
   opts.source = function(request, response){
     jq.ajax({
@@ -28,8 +17,8 @@ jq.fn.googleSuggest = function(opts){
       data: {
         q: request.term,
         nolabels: 't',
-        client: service.client,
-        ds: service.ds
+        client: opts.client,
+        ds: opts.ds
       },
       success: function(data) {
         response(jq.map(data[1], function(item){
