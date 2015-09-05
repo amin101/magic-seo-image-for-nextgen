@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ngg Auto Bulk\n"
-"POT-Creation-Date: 2015-09-04 10:58+0330\n"
-"PO-Revision-Date: 2015-09-04 11:44+0330\n"
+"POT-Creation-Date: 2015-09-05 18:15+0330\n"
+"PO-Revision-Date: 2015-09-05 18:16+0330\n"
 "Last-Translator: amin <aminmazrouei@gmail.com>\n"
 "Language-Team: amin <aminmazrouei@gmail.com>\n"
 "Language: fa_IR\n"
@@ -20,13 +20,13 @@ msgstr ""
 
 #: OptionPage.php:29
 msgctxt "page title"
-msgid "SEO alt nextgen"
-msgstr "سئو برای تصاویر"
+msgid "Magic SEO Image nextgen"
+msgstr "بهینه سازی جادویی تصاویر"
 
 #: OptionPage.php:30
 msgctxt "menu title"
-msgid "SEO alt nextgen"
-msgstr "سئو برای تصاویر"
+msgid "Magic SEO Image nextgen"
+msgstr "بهینه سازی جادویی تصاویر"
 
 #: OptionPage.php:48
 msgid "SEO nextGallery images"
@@ -36,19 +36,23 @@ msgstr "سئو برای تصاویر"
 msgid "Please select a gallery"
 msgstr "لطفا یگ گالری را انتخاب کنید"
 
-#: OptionPage.php:63
+#: OptionPage.php:62
+msgid "show posts tags"
+msgstr "نمایش برچسب های مطالب"
+
+#: OptionPage.php:64
 msgid "your custom tags :"
 msgstr "عبارت های دلخواه"
 
-#: OptionPage.php:65
+#: OptionPage.php:66
 msgid "add your custom alt:"
 msgstr "عبارت های دلخواه خود را برای alt وارد کنید :"
 
-#: OptionPage.php:66
+#: OptionPage.php:67
 msgid "Separate each alt with comma"
 msgstr "هر عبارت را با کاما از هم جدا کنید."
 
-#: OptionPage.php:68
+#: OptionPage.php:69
 msgid "add to tags"
 msgstr "افزودن به برچسب ها"
 
@@ -84,7 +88,7 @@ msgstr "توضیحات"
 msgid "Please select at least one image"
 msgstr "لطفا حداقل یک تصویر را انتخاب کنید."
 
-#: Repo.php:64 Repo.php:118 Repo.php:355
+#: Repo.php:64 Repo.php:118 Repo.php:358
 msgid "please select tag or write something!"
 msgstr "لطفا تگ های مورد نظر را انتخاب کنید  و یا عبارت مورد نظر را بنویسید."
 
@@ -95,6 +99,14 @@ msgstr "شما فراموش کردید که تصویری را انتخاب کن�
 #: Repo.php:178
 msgid "all galleris"
 msgstr "همه گالری ها"
+
+#~ msgctxt "page title"
+#~ msgid "SEO alt nextgen"
+#~ msgstr "سئو برای تصاویر"
+
+#~ msgctxt "menu title"
+#~ msgid "SEO alt nextgen"
+#~ msgstr "سئو برای تصاویر"
 
 #~ msgid "Save Changes"
 #~ msgstr "ذخیره تغییرات"
