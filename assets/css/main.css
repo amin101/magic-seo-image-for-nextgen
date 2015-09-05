@@ -13,7 +13,9 @@
 #js-div-tag-container {
     display:none;
     border:1px solid #8b999f;
-    padding:5px;
+    border-top: none;
+    padding:0 0 5px 0;
+    margin-top: 15px;
 }
 .js-seo-tag{
     padding: 5px;
@@ -69,4 +71,14 @@
 }
 .gallery-select option {
     padding:5px;
+}
+
+#show-tags,#js-div-tag-container h3{
+    background-color: #e8b648;
+    padding:10px;
+    border-radius:5px 5px 0 0 ;
+    color: #333333;
+    font-weight:bold;
+    display:block;
+    margin:0 -1px;
 }
