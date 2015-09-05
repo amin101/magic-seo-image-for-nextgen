@@ -26,10 +26,10 @@ class OptionPage {
 	public function plugin_menu() {
 
 		$hook = add_menu_page(
-			_x('SEO alt nextgen','page title',TXD),
-			_x('SEO alt nextgen','menu title',TXD),
+			_x('Magic SEO Image nextgen','page title',TXD),
+			_x('Magic SEO Image nextgen','menu title',TXD),
 			'manage_options',
-			'wp_seo_alt_nextgen',
+			'magic-seo-image-nextgen',
 			[ $this, 'plugin_settings_page' ]
 		);
 
@@ -59,6 +59,7 @@ class OptionPage {
 								<?php $this->pictureListTable->repo->showGalleries(); ?>
 							</div>
 							<form method="post">
+								<a id="show-tags"><?php _e('show posts tags',TXD); ?></a>
 								<?php $this->pictureListTable->repo->showTags('checkbox_alt',$fail_or_success); ?>
 								<div id="js-div-tag-container"><h3><?php _e('your custom tags :',TXD); ?></h3></div>
 								<div class="custom-alt-input">
