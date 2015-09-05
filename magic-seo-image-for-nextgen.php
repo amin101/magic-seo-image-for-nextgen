@@ -11,27 +11,32 @@
 defined( 'ABSPATH' ) or die( 'Sorry,you are not allowd to access this file!' );
 const TXD = 'nab';
 
-function load_plugin_assets()
-{
-    $plugin_dir = plugin_dir_url(__FILE__);
+function load_plugin_assets( $hook ) {
 
-    wp_enqueue_style('magic-seo-image',$plugin_dir.'assets/css/main.css');
-    wp_enqueue_style('jquery-ui',$plugin_dir.'assets/css/jquery-ui.min.css');
+	if ( $hook == 'toplevel_page_magic-seo-image-nextgen' ) {
 
-    wp_enqueue_script('jquery-ui-js',$plugin_dir.'assets/js/jquery-ui.min.js',array(),false,true);
-    wp_enqueue_script('auto-complete-script',$plugin_dir.'assets/js/jquery.googleSuggest.js',array('jquery'),false,true);
-    wp_enqueue_script('GSbootstart',$plugin_dir.'assets/js/GSbootstart.js',array(),false,true);
-    wp_enqueue_script('add_tags',$plugin_dir.'assets/js/add_tags.js',array('jquery'),false,true);
-}
-add_action('admin_head','load_plugin_assets');
+		$plugin_dir = plugin_dir_url( __FILE__ );
 
-function plugin_init()
-{
-   load_plugin_textdomain(TXD,false,'magic-seo-image-for-nextgen/languages');
+		wp_enqueue_style( 'magic-seo-image', $plugin_dir . 'assets/css/main.css' );
+		wp_enqueue_style( 'jquery-ui', $plugin_dir . 'assets/css/jquery-ui.min.css' );
+
+		wp_enqueue_script( 'jquery-ui-autocomplete' );
+		wp_enqueue_script( 'auto-complete-script', $plugin_dir . 'assets/js/jquery.googleSuggest.js', array( 'jquery' ), false, true );
+		wp_enqueue_script( 'GSbootstart', $plugin_dir . 'assets/js/GSbootstart.js', array(), false, true );
+		wp_enqueue_script( 'add_tags', $plugin_dir . 'assets/js/add_tags.js', array( 'jquery' ), false, true );
+		wp_enqueue_script( 'show_tags', $plugin_dir . 'assets/js/show_tags.js', array( 'jquery' ), false, true );
+	}
 }
 
-add_action('init','plugin_init');
+add_action( 'admin_enqueue_scripts', 'load_plugin_assets' );
 
-if(is_admin())
-require_once 'OptionPage.php';
+function plugin_init() {
+	load_plugin_textdomain( TXD, false, 'magic-seo-image-for-nextgen/languages' );
+}
+
+add_action( 'init', 'plugin_init' );
+
+if ( is_admin() ) {
+	require_once 'OptionPage.php';
+}
 
